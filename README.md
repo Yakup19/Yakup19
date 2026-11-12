@@ -26,6 +26,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Istanbul%2C_T%C3%BCrkiye-30363D?style=flat-square" alt="Istanbul, Türkiye">
   <img src="https://img.shields.io/badge/STM32_%C2%B7_ESP32_%C2%B7_Bare--metal_C-03234B?style=flat-square" alt="STM32 · ESP32 · Bare-metal C">
+  <!-- Profile view counter (komarev.com). "yakup19" in lowercase keeps the count from your old README. -->
+  <img src="https://komarev.com/ghpvc/?username=yakup19&label=Profile%20views&color=30363D&style=flat-square" alt="Profile views">
 </p>
 
 <br>
@@ -51,14 +53,14 @@ I'm currently pursuing a thesis-based **MSc in Defense Electronics Engineering**
 ### DDS Frequency Generator Board — Therapy Device
 ![STM32F103](https://img.shields.io/badge/STM32F103-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
 ![C](https://img.shields.io/badge/C_(bare--metal)-A8B9CC?style=flat-square&logo=c&logoColor=black)
-![AD9833](https://img.shields.io/badge/AD9833_DDS-30363D?style=flat-square)
+![DDS](https://img.shields.io/badge/DDS-30363D?style=flat-square)
 ![SPI](https://img.shields.io/badge/SPI-30363D?style=flat-square)
 ![UART](https://img.shields.io/badge/UART-30363D?style=flat-square)
 ![EasyEDA](https://img.shields.io/badge/EasyEDA-5588FF?style=flat-square&logo=easyeda&logoColor=white)
 
 I was the sole developer on a control board that generates adjustable frequencies below 1 MHz. I did the schematic, the 2-layer PCB, board bring-up and all of the firmware.
 - Designed a layered firmware architecture (driver / application) built around a **state machine**
-- Drove the **AD9833 DDS** over hardware SPI for adjustable output frequency
+- Drove a **DDS** IC over hardware SPI for adjustable output frequency
 - Integrated a **Nextion HMI** over UART for parameter control; parameters are stored in external flash memory
 - Tested the firmware on a **virtual twin of the MCU** before flashing, then ran functional tests on the boards with an oscilloscope
 

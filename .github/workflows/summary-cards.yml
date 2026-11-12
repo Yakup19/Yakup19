@@ -1,0 +1,29 @@
+# Generates profile summary cards (contributions, stats, most-committed
+# languages) into ./profile-summary-card-output/ in this repo.
+#
+# Uses the SUMMARY_GITHUB_TOKEN secret (a personal access token) so that
+# your PRIVATE repositories are included in the stats. The token is stored
+# as an encrypted secret and never appears in the README.
+name: Generate profile summary cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *"       # once a day (03:00 UTC)
+  workflow_dispatch:          # manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: main
+          UTC_OFFSET: 3
